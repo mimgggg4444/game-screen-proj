@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Transparent Window with Clickable Border",
+  "version": "1.0",
+  "description": "Makes the window transparent and allows clicking within the browser border.",
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles.css"],
+      "js": ["content.js"]
+    }
+  ]
+}
