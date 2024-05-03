@@ -1,17 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "Transparent Window with Clickable Border",
+  "name": "투명도 조절 확장 프로그램",
   "version": "1.0",
-  "description": "Makes the window transparent and allows clicking within the browser border.",
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
   "background": {
     "service_worker": "background.js"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "css": ["styles.css"],
-      "js": ["content.js"]
-    }
-  ]
+  }
 }
