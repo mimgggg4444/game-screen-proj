@@ -1,0 +1,12 @@
+# Ignore macOS desktop services store
+.DS_Store
+
+# Ignore PEM files
+*.pem
+
+# Ignore Chrome extensions
+*.crx
+
+# Ignore zip files
+*.zip
+.DS_Store
